@@ -1,0 +1,9 @@
+[submodule "poky"]
+	path = sources/poky
+	url = https://git.yoctoproject.org/poky
+[submodule "meta-openembedded"]
+	path = sources/meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded.git
+[submodule "sources/imx-meta-somlabs"]
+	path = sources/imx-meta-somlabs
+	url = https://github.com/SoMLabs/imx-meta-somlabs.git
