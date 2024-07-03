@@ -7,3 +7,24 @@
 [submodule "sources/imx-meta-somlabs"]
 	path = sources/imx-meta-somlabs
 	url = https://github.com/SoMLabs/imx-meta-somlabs.git
+[submodule "sources/meta-freescale"]
+	path = sources/meta-freescale
+	url = https://github.com/Freescale/meta-freescale.git
+[submodule "sources/meta-imx"]
+	path = sources/meta-imx
+	url = https://github.com/nxp-imx/meta-imx.git
+[submodule "sources/meta-freescale-3rdparty"]
+	path = sources/meta-freescale-3rdparty
+	url = https://github.com/Freescale/meta-freescale-3rdparty.git
+[submodule "sources/meta-freescale-distro"]
+	path = sources/meta-freescale-distro
+	url = https://github.com/Freescale/meta-freescale-distro.git
+[submodule "sources/meta-swupdate"]
+	path = sources/meta-swupdate
+	url = https://github.com/sbabic/meta-swupdate.git
+[submodule "sources/meta-clang"]
+	path = sources/meta-clang
+	url = https://github.com/kraj/meta-clang.git
+[submodule "sources/meta-arm"]
+	path = sources/meta-arm
+	url = https://git.yoctoproject.org/meta-arm
