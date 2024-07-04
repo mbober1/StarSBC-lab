@@ -8,11 +8,15 @@ inherit core-image
 INIT_MANAGER = "systemd"
 PACKAGE_CLASSES = "package_ipk"
 
+KERNEL_EXTRA_INSTALL = " \
+  kernel \
+  kernel-devicetree \
+  kernel-modules \
+"
+
 IMAGE_INSTALL = " \
+  ${KERNEL_EXTRA_INSTALL} \
 	packagegroup-core-boot \
-    kernel \
-    kernel-devicetree \
-	kernel-modules \
 	swupdate \
 	swupdate-www \
 	swupdate-client \
@@ -21,8 +25,12 @@ IMAGE_INSTALL = " \
 	htop \
 	openssh \
 	e2fsprogs \
+	mosquitto \
+  network-config-misc \
 "
 
 EXTRA_IMAGE_FEATURES = " \
     debug-tweaks \
 "
+
+BAD_RECOMMENDATIONS += "udev-hwdb"

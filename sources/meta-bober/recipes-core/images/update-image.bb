@@ -16,4 +16,4 @@ IMAGE_DEPENDS = "lab-image"
 # images and files that will be included in the .swu image
 SWUPDATE_IMAGES = "lab-image"
 
-SWUPDATE_IMAGES_FSTYPES[lab-image] = "-beaglebone-lab.rootfs.tar.zst"
+SWUPDATE_IMAGES_FSTYPES[lab-image] = "-starsbc-6ull-custom.rootfs.tar.zst"

@@ -7,7 +7,7 @@ software =
 
 		files: (
 			{
-				filename = "lab-image-beaglebone-lab.rootfs.tar.zst";
+				filename = "lab-image-starsbc-6ull-custom.rootfs.tar.zst";
 				type = "archive";
 				device = "/dev/update";
 				filesystem = "ext4";

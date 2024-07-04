@@ -5,15 +5,13 @@
 - [X] MPU6050 Accelerometer
 - [ ] GPS
 - [X] Sleep / Wakeup Button
-- [X] LED triggered by CPU activity
 - [ ] Analog potentiometer
-- [ ] Second PHY (W5500)
-- [ ] Custom Distro
-- [ ] Custom Machine
-- [ ] Custom Image
-- [ ] OTA Update
-- [ ] Custom Kernel config
-- [ ] Custom Bootloader config
+- [X] Custom Distro
+- [X] Custom Machine
+- [X] Custom Image
+- [X] OTA Update
+- [X] Custom Kernel config
+- [X] Custom Bootloader config
 - [ ] Development env via VSCode
 - [ ] C++ App
 - [ ] Python App
