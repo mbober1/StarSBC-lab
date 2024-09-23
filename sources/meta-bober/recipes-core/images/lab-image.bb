@@ -19,6 +19,7 @@ IMAGE_INSTALL = " \
   e2fsprogs \
   firmware-imx-sdma-imx6q \
   openssh \
+  network-config-misc \
 "
 
 EXTRA_IMAGE_FEATURES = " \
