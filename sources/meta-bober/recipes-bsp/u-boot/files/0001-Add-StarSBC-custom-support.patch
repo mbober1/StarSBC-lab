@@ -1,0 +1,26 @@
+From 7514da35e0d04568b43166c99ce33984bade39a6 Mon Sep 17 00:00:00 2001
+From: Marcin Bober <mbober1@gmail.com>
+Date: Mon, 23 Sep 2024 11:29:35 +0000
+Subject: [PATCH] Add StarSBC-custom support
+Upstream-Status: Inappropriate
+
+---
+ include/configs/somlabs_visionsom_6ull.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/somlabs_visionsom_6ull.h b/include/configs/somlabs_visionsom_6ull.h
+index 041a83b057..6ba4908776 100644
+--- a/include/configs/somlabs_visionsom_6ull.h
++++ b/include/configs/somlabs_visionsom_6ull.h
+@@ -43,7 +43,7 @@
+ 	"setbootargs=setenv bootargs console=${console},${baudrate} " \
+ 		"${rootspec}\0" \
+ 	"execbootscript=echo Running bootscript...; source\0" \
+-	"setfdtfile=setenv fdt_file somlabs-visionsom-6ull.dtb\0" \
++	"setfdtfile=setenv fdt_file starsbc-6ull.dtb\0" \
+ 	"checkbootdev=run setbootscriptmmc; " \
+ 		"run setrootmmc; " \
+ 		"run setloadmmc; " \
+-- 
+2.44.1
+

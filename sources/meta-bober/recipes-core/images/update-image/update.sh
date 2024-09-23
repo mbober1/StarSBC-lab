@@ -4,6 +4,9 @@ if [ $# -lt 1 ]; then
 	exit 0;
 fi
 
+FIRST_PART="2"
+SECOND_PART="3"
+
 function get_current_root_device
 {
 	for i in `cat /proc/cmdline`; do
@@ -12,23 +15,17 @@ function get_current_root_device
 		fi
 	done
 
-	if echo ${CURRENT_ROOT} | grep -q "^PARTUUID"; then
-		CURRENT_ROOT=$(readlink -f /dev/disk/by-partuuid/${CURRENT_ROOT:9})
-	fi
-
-	#returns /dev/mmcblkXpY
+	# CURRENT_ROOT == /dev/mmcblkXpY
 }
 
 function get_update_part
 {
 	CURRENT_PART="${CURRENT_ROOT: -1}"
-	if [ $CURRENT_PART = "2" ]; then
-		UPDATE_PART="3";
+	if [ $CURRENT_PART = $FIRST_PART ]; then
+		UPDATE_PART=$SECOND_PART;
 	else
-		UPDATE_PART="2";
+		UPDATE_PART=$FIRST_PART;
 	fi
-
-	#/dev/mmcblkXp2 or /dev/mmcblkXp3
 }
 
 function get_update_device
@@ -61,21 +58,9 @@ fi
 
 if [ $1 == "postinst" ]; then
 	get_current_root_device
-
-	#if [ ! -d "/sys/kernel/debug/gpmi-nand" ]; then
-	#	# Adjust u-boot-fw-utils for eMMC on the installed rootfs
-	#	mount -t ext4 /dev/update /tmp/datadst
-	#	rm /tmp/datadst/sbin/fw_printenv-nand
-	#	mv /tmp/datadst/sbin/fw_printenv-mmc /tmp/datadst/sbin/fw_printenv
-	#	sed -i "/mtd/ s/^#*/#/" /tmp/datadst/etc/fw_env.config
-	#	CURRENT_BLK_DEV=${CURRENT_ROOT%p?}
-	#	sed -i "s/#*\/dev\/mmcblk./${CURRENT_BLK_DEV//\//\\/}/" /tmp/datadst/etc/fw_env.config
-	#	umount /dev/update
-	#fi
-
 	get_update_part
 	get_update_device
 
-	((echo "a"; echo "2"; echo "a"; echo "3"; echo "w") | fdisk /dev/mmcblk0) || true
+	((echo "a"; echo "2"; echo "a"; echo "3"; echo "w") | fdisk /dev/mmcblk1) || true
 
 fi

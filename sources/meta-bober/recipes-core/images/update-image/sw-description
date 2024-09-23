@@ -2,7 +2,7 @@ software =
 {
 	version = "0.1.0";
 
-	beaglebone-yocto = {
+	starsbc-6ull-custom = {
 		hardware-compatibility: [ "1.0" ];
 
 		files: (
