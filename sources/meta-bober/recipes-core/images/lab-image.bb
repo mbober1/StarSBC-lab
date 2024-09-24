@@ -13,13 +13,16 @@ KERNEL_EXTRA_INSTALL = " \
 
 IMAGE_INSTALL = " \
   ${KERNEL_EXTRA_INSTALL} \
+  u-boot-default-env \
+  rauc \
   packagegroup-core-boot \
   nano \
   htop \
-  e2fsprogs \
   firmware-imx-sdma-imx6q \
+  firmwared \
   openssh \
   network-config-misc \
+  linux-firmware-murata-1dx \
 "
 
 EXTRA_IMAGE_FEATURES = " \

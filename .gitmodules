@@ -7,9 +7,9 @@
 [submodule "sources/meta-freescale"]
 	path = sources/meta-freescale
 	url = https://github.com/Freescale/meta-freescale.git
-[submodule "sources/meta-swupdate"]
-	path = sources/meta-swupdate
-	url = https://github.com/sbabic/meta-swupdate.git
 [submodule "sources/meta-arm"]
 	path = sources/meta-arm
 	url = https://git.yoctoproject.org/meta-arm
+[submodule "sources/meta-rauc"]
+	path = sources/meta-rauc
+	url = https://github.com/rauc/meta-rauc.git
